@@ -1,3 +1,4 @@
+/* eslint-disable import/extensions */
 import { configureStore } from '@reduxjs/toolkit';
 import logger from 'redux-logger';
 import hallOfFameSlice from './hof/hallOfFameSlice';
