@@ -1,6 +1,6 @@
 import { configureStore, combineReducers } from '@reduxjs/toolkit';
 import logger from 'redux-logger';
-import hallOfFameReducer from './hof/hallOfFameSlice.js';
+import hallOfFameReducer from './hof/hallOfFameSlice';
 
 const rootReducer = combineReducers({
   hallOfFame: hallOfFameReducer,
