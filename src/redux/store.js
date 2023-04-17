@@ -1,17 +1,9 @@
 import { configureStore, combineReducers } from '@reduxjs/toolkit';
 import logger from 'redux-logger';
-import justReleasedSlice from './just_released/justReleasedSlice';
-import popularSlice from './popular/popularSlice';
-import upcomingSlice from './upcoming/upcomingSlice';
-import mostReviewedSlice from './most_reviewed/mostReviewedSlice';
-import hallOfFameSlice from './hof/hallOfFameSlice';
+import hallOfFameReducer from './hof/hallOfFameSlice';
 
 const rootReducer = combineReducers({
-  hallOfFame: hallOfFameSlice,
-  justReleased: justReleasedSlice,
-  popular: popularSlice,
-  upcoming: upcomingSlice,
-  mostViewed: mostReviewedSlice,
+  hallOfFame: hallOfFameReducer,
 });
 
 const store = configureStore({
