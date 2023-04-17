@@ -1,28 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Header from './components/Header';
+import Categories from './routes/Categories';
+import HallOfFame from './pages/HallOfFame';
+import JustReleased from './pages/JustReleased';
+import Popular from './pages/Popular';
+import MostReviewed from './pages/MostReviewed';
+import Upcoming from './pages/Upcoming';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit
-          {' '}
-          <code>src/App.js</code>
-          {' '}
-          and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Categories />} />
+        <Route path="/hof" element={<HallOfFame />} />
+        <Route path="/just_released" element={<JustReleased />} />
+        <Route path="/popular" element={<Popular />} />
+        <Route path="/upcoming" element={<Upcoming />} />
+        <Route path="/most_reviewed" element={<MostReviewed />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
