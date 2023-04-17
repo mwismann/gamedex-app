@@ -4,14 +4,14 @@ import hallOfFameSlice from './hof/hallOfFameSlice';
 import justReleasedSlice from './just_released/justReleasedSlice';
 import popularSlice from './popular/popularSlice';
 import upcomingSlice from './upcoming/upcomingSlice';
-import mostViewedSlice from './most_viewed/mostViewedSlice';
+import mostReviewedSlice from './most_reviewed/mostReviewedSlice';
 
 const rootReducer = combineReducers({
   hallOfFame: hallOfFameSlice,
   justReleased: justReleasedSlice,
   popular: popularSlice,
   upcoming: upcomingSlice,
-  mostViewed: mostViewedSlice,
+  mostViewed: mostReviewedSlice,
 });
 
 const store = configureStore({

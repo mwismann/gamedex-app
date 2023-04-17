@@ -1,5 +1,5 @@
-import { createSlice } from "@reduxjs/toolkit";
-import getHallOfFame from "./actions";
+import { createSlice } from '@reduxjs/toolkit';
+import getHallOfFame from './actions';
 
 const initialState = {
   hallOfFame: [],
@@ -8,7 +8,7 @@ const initialState = {
 };
 
 const hallOfFameSlice = createSlice({
-  name: "hallOfFame",
+  name: 'hallOfFame',
   initialState,
   reducers: {},
   extraReducers: (builder) => {

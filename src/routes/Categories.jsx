@@ -14,7 +14,7 @@ const Categories = () => (
     <ul>
       {linksTo.map(({ to, label }) => (
         <li key={to}>
-          <NavLink to={to} activeClassName="active">
+          <NavLink to={to}>
             {label}
           </NavLink>
         </li>
