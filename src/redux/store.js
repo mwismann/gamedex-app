@@ -1,13 +1,11 @@
-import { configureStore, combineReducers } from '@reduxjs/toolkit';
+import { configureStore } from '@reduxjs/toolkit';
 import logger from 'redux-logger';
 import hallOfFameSlice from './hof/hallOfFameSlice';
 
-const rootReducer = combineReducers({
-  hallOfFame: hallOfFameSlice,
-});
-
 const store = configureStore({
-  reducer: rootReducer,
+  reducer: {
+    hallOfFame: hallOfFameSlice,
+  },
   middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),
 });
 
