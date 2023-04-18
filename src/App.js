@@ -4,7 +4,6 @@ import Categories from './routes/Categories';
 import HallOfFame from './pages/HallOfFame';
 import JustReleased from './pages/JustReleased';
 import Popular from './pages/Popular';
-import MostReviewed from './pages/MostReviewed';
 import Upcoming from './pages/Upcoming';
 
 function App() {
@@ -17,7 +16,6 @@ function App() {
         <Route path="/just_released" element={<JustReleased />} />
         <Route path="/popular" element={<Popular />} />
         <Route path="/upcoming" element={<Upcoming />} />
-        <Route path="/most_reviewed" element={<MostReviewed />} />
       </Routes>
     </BrowserRouter>
   );

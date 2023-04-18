@@ -7,7 +7,7 @@ const Game = ({
     <img src={`https://img.opencritic.com/${img}`} alt={name} />
     <h2>{name}</h2>
     <p>{tier}</p>
-    <p>{score}</p>
+    <p>{Math.round(score)}</p>
   </div>
 );
 
