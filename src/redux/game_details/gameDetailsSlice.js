@@ -1,30 +1,30 @@
 import { createSlice } from '@reduxjs/toolkit';
-import getPopular from './actions';
+import getGame from './actions';
 
 const initialState = {
-  popular: [],
+  game: {},
   loading: false,
   error: null,
 };
 
-const popularSlice = createSlice({
-  name: 'popular',
+const gameDetailsSlice = createSlice({
+  name: 'gameDetails',
   initialState,
   reducers: {},
   extraReducers: (builder) => {
     builder
-      .addCase(getPopular.pending, (state) => {
+      .addCase(getGame.pending, (state) => {
         state.loading = true;
       })
-      .addCase(getPopular.fulfilled, (state, action) => {
+      .addCase(getGame.fulfilled, (state, action) => {
         state.loading = false;
-        state.popular = action.payload;
+        state.game = action.payload;
       })
-      .addCase(getPopular.rejected, (state, action) => {
+      .addCase(getGame.rejected, (state, action) => {
         state.loading = false;
         state.error = action.payload;
       });
   },
 });
 
-export default popularSlice.reducer;
+export default gameDetailsSlice.reducer;

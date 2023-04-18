@@ -4,8 +4,8 @@ import Categories from './routes/Categories';
 import HallOfFame from './pages/HallOfFame';
 import JustReleased from './pages/JustReleased';
 import Popular from './pages/Popular';
-import MostReviewed from './pages/MostReviewed';
 import Upcoming from './pages/Upcoming';
+import GameDetails from './pages/GameDetails';
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
         <Route path="/just_released" element={<JustReleased />} />
         <Route path="/popular" element={<Popular />} />
         <Route path="/upcoming" element={<Upcoming />} />
-        <Route path="/most_reviewed" element={<MostReviewed />} />
+        <Route path="/:page/:id" element={<GameDetails />} />
       </Routes>
     </BrowserRouter>
   );

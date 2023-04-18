@@ -1,19 +1,19 @@
-import { NavLink, Outlet, useLocation } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 const Header = () => {
   const location = useLocation();
+  const navigate = useNavigate();
 
   return (
     <>
       <header>
         {location.pathname !== '/' && (
-          <NavLink to="/" className="btn btn-primary">
+          <button type="button" onClick={() => navigate(-1)}>
             Back
-          </NavLink>
+          </button>
         )}
         <h1>Browse it</h1>
       </header>
-      <Outlet />
     </>
   );
 };
