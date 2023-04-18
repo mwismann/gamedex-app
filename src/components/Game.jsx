@@ -1,17 +1,20 @@
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 const Game = ({
-  name, img, tier, score,
+  page, id, name, img, tier, score,
 }) => (
-  <div>
+  <Link to={`/${page}/${id}`}>
     <img src={`https://img.opencritic.com/${img}`} alt={name} />
     <h2>{name}</h2>
     <p>{tier}</p>
-    <p>{Math.round(score)}</p>
-  </div>
+    <p>{Math.round(score) || ''}</p>
+  </Link>
 );
 
 Game.propTypes = {
+  page: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
   img: PropTypes.string.isRequired,
   tier: PropTypes.string.isRequired,

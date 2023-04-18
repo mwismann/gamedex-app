@@ -3,11 +3,15 @@ import logger from 'redux-logger';
 import hallOfFameSlice from './hof/hallOfFameSlice';
 import justReleasedSlice from './just_released/justReleasedSlice';
 import popularSlice from './popular/popularSlice';
+import upcomingSlice from './upcoming/upcomingSlice';
+import gameDetailsSlice from './game_details/gameDetailsSlice';
 
 const rootReducer = combineReducers({
   hallOfFame: hallOfFameSlice,
   justReleased: justReleasedSlice,
   popular: popularSlice,
+  upcoming: upcomingSlice,
+  game: gameDetailsSlice,
 });
 
 const store = configureStore({

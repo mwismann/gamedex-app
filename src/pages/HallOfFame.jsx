@@ -20,6 +20,8 @@ const HallOfFame = () => {
         {hallOfFame.map((game) => (
           <li key={game.id}>
             <Game
+              page="hof"
+              id={game.id}
               name={game.name}
               img={game.images.banner.og}
               tier={game.tier}

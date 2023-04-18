@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const linksTo = [
   { to: '/hof', label: 'Hall of Fame' },
@@ -13,9 +13,9 @@ const Categories = () => (
     <ul>
       {linksTo.map(({ to, label }) => (
         <li key={to}>
-          <NavLink to={to}>
+          <Link to={to}>
             {label}
-          </NavLink>
+          </Link>
         </li>
       ))}
     </ul>
