@@ -1,11 +1,15 @@
-import { configureStore } from '@reduxjs/toolkit';
+import { configureStore, combineReducers } from '@reduxjs/toolkit';
 import logger from 'redux-logger';
 import hallOfFameSlice from './hof/hallOfFameSlice';
+import justReleasedSlice from './just_released/justReleasedSlice';
+
+const rootReducer = combineReducers({
+  hallOfFame: hallOfFameSlice,
+  justReleased: justReleasedSlice,
+});
 
 const store = configureStore({
-  reducer: {
-    hallOfFame: hallOfFameSlice,
-  },
+  reducer: rootReducer,
   middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),
 });
 
