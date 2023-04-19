@@ -1,9 +1,8 @@
 import { PropTypes } from 'prop-types';
 
 const Searchbar = ({ value, handleChange }) => (
-  <div>
-    <input type="text" name="search" className="border border-black rounded" value={value} onChange={handleChange} />
-    <button type="button" className="border border-black rounded">Search</button>
+  <div className="w-8/12">
+    <input type="text" name="search" className="w-full py-0.5 px-1 text-main border border-black rounded" value={value} onChange={handleChange} />
   </div>
 );
 
