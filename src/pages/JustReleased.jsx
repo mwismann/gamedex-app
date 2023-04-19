@@ -20,6 +20,8 @@ const JustReleased = () => {
         {justReleased.map((game) => (
           <li key={game.id}>
             <Game
+              page="just_released"
+              id={game.id}
               name={game.name}
               img={game.images.banner.og}
               tier={game.tier}
