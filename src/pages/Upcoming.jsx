@@ -22,19 +22,26 @@ const Upcoming = () => {
   );
 
   return (
-    <div>
-      <h1>Upcoming Games</h1>
-      <Searchbar value={value} handleChange={handleChange} />
+    <div className="h-screen flex flex-col">
+      <div className="w-full flex flex-col items-center justify-center gap-1 text-white bg-secondary grow">
+        <h1 className="h-32 flex items-center justify-center text-2xl font-bold">Upcoming Games</h1>
+      </div>
+      <div className="flex items-center gap-2 py-1 px-4 text-xs text-white bg-secondary/50">
+        <Searchbar value={value} handleChange={handleChange} />
+        {'( '}
+        {query.length}
+        {' ) games found'}
+      </div>
       {loading && <p>Loading...</p>}
       {error && <p>{error}</p>}
-      <ul>
+      <ul className="p-4 flex flex-col gap-4 bg-black">
         {query.map((game) => (
           <li key={game.id}>
             <Game
               page="upcoming"
               id={game.id}
               name={game.name}
-              img={game.images.banner.og}
+              img={game.images.box.og}
             />
           </li>
         ))}
