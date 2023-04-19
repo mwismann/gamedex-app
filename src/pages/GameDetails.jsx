@@ -17,11 +17,13 @@ const GameDetails = () => {
       {loading && <p>Loading...</p>}
       {error && <p>{error}</p>}
       <div className="flex gap-4">
+        {(game.name && (
         <img
           src={`https://img.opencritic.com/${game.images.box.sm}`}
           alt={game.name}
           className="rounded"
         />
+        ))}
         <div className="flex flex-col gap-2">
           <h1 className="text-2xl font-semibold">{game.name}</h1>
           <div className="flex items-center gap-2">
