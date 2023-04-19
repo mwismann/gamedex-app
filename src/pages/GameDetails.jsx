@@ -13,38 +13,53 @@ const GameDetails = () => {
   }, []);
 
   return (
-    <div>
+    <div className="p-4 flex flex-col gap-4 text-white bg-black">
       {loading && <p>Loading...</p>}
       {error && <p>{error}</p>}
-      {/* <img src={`https://img.opencritic.com/${game.images.banner.og}`} alt={game.name} /> */}
-      <h1>{game.name}</h1>
-      <p>{game.description}</p>
-      <div>
-        <span>
-          Score:
-          {' '}
-          {game.medianScore || ''}
-        </span>
-        <span>{game.tier}</span>
+      <div className="flex gap-4">
+        <img
+          src={`https://img.opencritic.com/${game.images.box.sm}`}
+          alt={game.name}
+          className="rounded"
+        />
+        <div className="flex flex-col gap-2">
+          <h1 className="text-2xl font-semibold">{game.name}</h1>
+          <div className="flex items-center gap-2">
+            <span className="text-sm">
+              Score:
+              {' '}
+              {(Math.round(game.medianScore) === -1 || !game.medianScore) ? 'N/A' : Math.round(game.medianScore)}
+            </span>
+            <span className={game.tier ? 'py-0.5 px-1 text-xs bg-secondary rounded' : ''}>{game.tier}</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <p className="text-sm">Genres:</p>
+            <ul className="flex items-center gap-2 flex-wrap">
+              {game.Genres && game.Genres.map((genre) => (
+                <li
+                  key={genre.id}
+                  className="py-0.5 px-1 text-xs bg-secondary rounded"
+                >
+                  {genre.name}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <ul className="flex flex-col gap-2 text-sm">
+            {game.Companies && game.Companies.map((company) => (
+              <li
+                key={company.name}
+              >
+                {company.type.toLowerCase() === 'developer' ? 'Developed by' : 'Published by'}
+                :
+                {' '}
+                {company.name}
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
-      <div>
-        <p>Genres:</p>
-        <ul>
-          {game.Genres && game.Genres.map((genre) => (
-            <li key={genre.id}>{genre.name}</li>
-          ))}
-        </ul>
-      </div>
-      <ul>
-        {game.Companies && game.Companies.map((company) => (
-          <li key={company.name}>
-            {company.type.toLowerCase() === 'developer' ? 'Developed by' : 'Published by'}
-            :
-            {' '}
-            {company.name}
-          </li>
-        ))}
-      </ul>
+      <p className="text-sm text-justify">{game.description}</p>
     </div>
   );
 };
