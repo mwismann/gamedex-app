@@ -20,6 +20,8 @@ const Upcoming = () => {
         {upcoming.map((game) => (
           <li key={game.id}>
             <Game
+              page="upcoming"
+              id={game.id}
               name={game.name}
               img={game.images.banner.og}
             />
