@@ -20,6 +20,8 @@ const Popular = () => {
         {popular.map((game) => (
           <li key={game.id}>
             <Game
+              page="popular"
+              id={game.id}
               name={game.name}
               img={game.images.box.og}
               tier={game.tier}
