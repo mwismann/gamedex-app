@@ -16,14 +16,14 @@ const GameDetails = () => {
     <div>
       {loading && <p>Loading...</p>}
       {error && <p>{error}</p>}
-      <img src={`https://img.opencritic.com/${game.images.banner.og}`} alt={game.name} />
+      {/* <img src={`https://img.opencritic.com/${game.images.banner.og}`} alt={game.name} /> */}
       <h1>{game.name}</h1>
       <p>{game.description}</p>
       <div>
         <span>
           Score:
           {' '}
-          {game.medianScore}
+          {game.medianScore || ''}
         </span>
         <span>{game.tier}</span>
       </div>
