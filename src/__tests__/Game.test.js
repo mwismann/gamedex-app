@@ -1,8 +1,8 @@
 import '@testing-library/jest-dom';
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import Game from '../components/Game';
 import { MemoryRouter as Router } from 'react-router-dom';
+import Game from '../components/Game';
 
 describe('Game component', () => {
   const gameProps = {
@@ -17,7 +17,14 @@ describe('Game component', () => {
   test('renders the game name', () => {
     render(
       <Router>
-        <Game {...gameProps} />
+        <Game
+          page={gameProps.page}
+          id={gameProps.id}
+          name={gameProps.name}
+          img={gameProps.img}
+          tier={gameProps.tier}
+          score={gameProps.score}
+        />
       </Router>,
     );
     const linkElement = screen.getByRole('link');
@@ -30,7 +37,14 @@ describe('Game component', () => {
   test('renders the game image', () => {
     render(
       <Router>
-        <Game {...gameProps} />
+        <Game
+          page={gameProps.page}
+          id={gameProps.id}
+          name={gameProps.name}
+          img={gameProps.img}
+          tier={gameProps.tier}
+          score={gameProps.score}
+        />
       </Router>,
     );
     const linkElement = screen.getByRole('link');
@@ -43,12 +57,19 @@ describe('Game component', () => {
   test('renders the game tier', () => {
     render(
       <Router>
-        <Game {...gameProps} />
+        <Game
+          page={gameProps.page}
+          id={gameProps.id}
+          name={gameProps.name}
+          img={gameProps.img}
+          tier={gameProps.tier}
+          score={gameProps.score}
+        />
       </Router>,
     );
     const linkElement = screen.getByRole('link');
     expect(linkElement).toHaveAttribute('href', `/${gameProps.page}/${gameProps.id}`);
-    
+
     const gameTier = screen.getByText(gameProps.tier);
     expect(gameTier).toBeInTheDocument();
   });
