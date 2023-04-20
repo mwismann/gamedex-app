@@ -4,7 +4,7 @@ import { render } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router } from 'react-router-dom';
 import configureMockStore from 'redux-mock-store';
-import HallOfFame from '../pages/HallOfFame';
+import Popular from '../pages/Popular';
 
 const mockStore = configureMockStore([]);
 jest.mock('react-router-dom', () => ({
@@ -16,8 +16,8 @@ describe('Hall of Fame', () => {
   let store;
   beforeEach(() => {
     store = mockStore({
-      hallOfFame: {
-        hallOfFame: [
+      popular: {
+        popular: [
           {
             name: 'Hi-Fi Rush',
             id: 14227,
@@ -44,14 +44,14 @@ describe('Hall of Fame', () => {
     store.dispatch = jest.fn();
   });
 
-  test('should render Hall of Fame', () => {
+  test('should render Popular', () => {
     const { getByText } = render(
       <Provider store={store}>
         <Router>
-          <HallOfFame />
+          <Popular />
         </Router>
       </Provider>,
     );
-    expect(getByText('Hall Of Fame')).toBeInTheDocument();
+    expect(getByText('Popular Games')).toBeInTheDocument();
   });
 });

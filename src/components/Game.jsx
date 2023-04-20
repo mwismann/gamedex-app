@@ -18,13 +18,18 @@ const Game = ({
   </Link>
 );
 
+Game.defaultProps = {
+  tier: null,
+  score: null,
+};
+
 Game.propTypes = {
   page: PropTypes.string.isRequired,
   id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
   img: PropTypes.string.isRequired,
-  tier: PropTypes.string.isRequired,
-  score: PropTypes.number.isRequired,
+  tier: PropTypes.string,
+  score: PropTypes.number,
 };
 
 export default Game;

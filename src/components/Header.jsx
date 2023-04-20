@@ -24,7 +24,10 @@ const Header = () => {
         {location.pathname !== '/' && (
           <button
             type="button"
-            onClick={() => navigate('/')}
+            onClick={() => {
+              const searchInput = document.querySelector('#search');
+              return (searchInput && searchInput.focus());
+            }}
           >
             <FaSearch />
           </button>
