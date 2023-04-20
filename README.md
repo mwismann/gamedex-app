@@ -6,6 +6,7 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
+- [🚀 Walkthrough](#walkthrough)
 - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
@@ -61,6 +62,13 @@
 - **[Correct Redux integration]**
 - **[Correct async consumption of API]**
 - **[Correct integration of Tailwindcss styling]**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+### Walkthrough <a name="walkthrough"></a>
+
+[Walkthrough](https://www.loom.com/share/cd429656b3a54e30922b5fd467b7214f)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
