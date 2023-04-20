@@ -23,7 +23,7 @@ const HallOfFame = () => {
 
   return (
     <div className="h-screen flex flex-col">
-      <div className="w-full flex flex-col items-center justify-center gap-1 text-white bg-secondary grow">
+      <div className="w-full flex flex-col items-center justify-center gap-1 text-white bg-secondary">
         <h1 className="h-32 flex items-center justify-center text-2xl font-bold">Hall Of Fame</h1>
       </div>
       <div className="flex items-center gap-2 py-1 px-4 text-xs text-white bg-secondary/50">
@@ -34,7 +34,7 @@ const HallOfFame = () => {
       </div>
       {loading && <p>Loading...</p>}
       {error && <p>{error}</p>}
-      <ul className="p-4 flex flex-col gap-4 bg-black">
+      <ul className="p-4 flex flex-col gap-4 bg-black grow">
         {query.map((game) => (
           <li key={game.id}>
             <Game
