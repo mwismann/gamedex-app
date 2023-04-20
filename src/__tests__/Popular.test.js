@@ -1,4 +1,4 @@
-import fetchPopular from "./__mocks__/fetchPopular";
+import fetchPopular from './__mocks__/fetchPopular';
 
 describe('fetchJustReleased', () => {
   test('Should return defined data', () => {

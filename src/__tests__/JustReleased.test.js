@@ -1,4 +1,4 @@
-import fetchJustReleased from "./__mocks__/fetchJustReleased";
+import fetchJustReleased from './__mocks__/fetchJustReleased';
 
 describe('fetchJustReleased', () => {
   test('Should return defined data', () => {
