@@ -26,7 +26,7 @@ const Header = () => {
             type="button"
             onClick={() => {
               const searchInput = document.querySelector('#search');
-              searchInput.focus();
+              return (searchInput && searchInput.focus());
             }}
           >
             <FaSearch />
