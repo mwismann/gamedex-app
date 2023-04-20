@@ -207,8 +207,7 @@ const fetchHallOfFame = () => {
       },
     ],
   };
-  const { data } = response;
-  return data;
+  return response.data;
 };
 
 export default fetchHallOfFame;
