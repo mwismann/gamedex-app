@@ -1,11 +1,11 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Header from './components/Header';
-import Categories from './routes/Categories';
-import HallOfFame from './pages/HallOfFame';
-import JustReleased from './pages/JustReleased';
-import Popular from './pages/Popular';
-import Upcoming from './pages/Upcoming';
-import GameDetails from './pages/GameDetails';
+import Header from './Header';
+import Categories from '../routes/Categories';
+import HallOfFame from '../pages/HallOfFame';
+import JustReleased from '../pages/JustReleased';
+import Popular from '../pages/Popular';
+import Upcoming from '../pages/Upcoming';
+import GameDetails from '../pages/GameDetails';
 
 function App() {
   return (
