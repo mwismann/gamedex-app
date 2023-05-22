@@ -22,7 +22,7 @@
 - [🙏 Acknowledgements](#acknowledgements)
 - [📝 License](#license)
 
-# 📖 [react-bookstore] <a name="about-project"></a>
+# 📖 [gamedex] <a name="about-project"></a>
 
 **[gamedex]** is a SPA built with [React](https://react.dev/), [Redux Toolkit](https://redux-toolkit.js.org/), and [Tailwind](https://tailwindcss.com/). The app makes use of the [OpenCritic API](https://rapidapi.com/opencritic-opencritic-default/api/opencritic-api) as the backend. The app allows users to dive through four different categories to get information regarding the most inquired games of the industry at the moment. Metrics are displayed in real time as the user navigates through the site. Original design idea by [Nelson Sakwa on Behance](https://www.behance.net/sakwadesignstudio).
 
